@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Government Flag Coloring Portal</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Page layout built with old-school tables -->
+    <table id="layout" cellspacing="0" cellpadding="2" border="1">
+        <tr>
+            <td id="banner" colspan="3">
+                <table width="100%" cellspacing="0" cellpadding="2" border="0">
+                    <tr>
+                        <td width="80">
+                            <img src="flags/primary_colors.svg" alt="Primary Colors Icon" class="seal" />
+                        </td>
+                        <td>
+                            <div class="site-title">National & Regional Flag Coloring Portal</div>
+                            <div class="subtitle">Department of Vexillology & Public Services</div>
+                        </td>
+                        <td width="220" class="banner-right">
+                            <div>Last Updated: <span>2025-10-18</span></div>
+                            <div>Contact: <a href="https://zishuning.itch.io/">https://zishuning.itch.io/</a></div>
+                        </td>
+                    </tr>
+                </table>
+                <hr class="rule" />
+                <div class="breadcrumb">Home > Services > Flag Coloring</div>
+            </td>
+        </tr>
+        <tr>
+            <td id="left-nav" width="180" valign="top">
+                <div class="nav-header">Quick Links</div>
+                <hr />
+                <div class="nav-link"><a href="#">About the Program</a></div>
+                <div class="nav-link"><a href="#">Compliance Notices</a></div>
+                <div class="nav-link"><a href="#">Accessibility</a></div>
+                <div class="nav-link"><a href="#">FOIA</a></div>
+                <div class="nav-link"><a href="#">Public Records</a></div>
+                <div class="nav-link"><a href="#">Privacy Policy</a></div>
+                <hr />
+                <div class="nav-header">Announcements</div>
+<div class="nav-link"><a href="#">New Flag Designs Coming Soon!</a></div>
+<div class="nav-link"><a href="#">Vexillology Conference 2024</a></div>
+                <div class="notice">Service windows may be delayed due to network maintenance.</div>
+                <div class="notice">Please print this page for your records.</div>
+            </td>
+            <td id="main-content" valign="top">
+                <div id="selection-screen">
+                    <h1>Flag Selection</h1>
+                    <div class="intro">
+                        Choose a country from the list below. Click on a thumbnail to begin coloring. For official guidance, consult Circular 12-B. This page is intended for public use and may contain outdated links.
+                    </div>
+                    <hr class="rule" />
+                    <div id="flag-grid"></div>
+                </div>
+
+                <div id="coloring-screen" class="hidden">
+                    <h1>Coloring Workspace</h1>
+                    <table width="100%" cellspacing="0" cellpadding="2" border="1">
+                        <tr>
+                            <td>
+                                <div id="flag-container"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="controls">
+                                    <label for="color-picker">Color:</label>
+                                    <input type="color" id="color-picker" value="#ff0000" />
+                                    <label for="hex-input">Hex:</label>
+                                    <input type="text" id="hex-input" placeholder="#ff0000" />
+                                    <button id="reset-button">Reset</button>
+                                    <button id="export-button">Export</button>
+                                    <button id="back-button">Back</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="smallprint">For official use only. Do not distribute without prior authorization.</div>
+                </div>
+            </td>
+            <td id="right-rail" width="220" valign="top">
+                <div class="nav-header">Notices</div>
+<div class="nav-link"><a href="#">Copyright Information</a></div>
+<div class="nav-link"><a href="#">Terms of Service</a></div>
+                <hr />
+                <div class="notice">Graphics may appear pixelated at certain resolutions.</div>
+                <div class="notice">Data sourced from public registries and may be incomplete.</div>
+                <hr />
+                <div class="nav-header">Help</div>
+<div class="nav-link"><a href="#">FAQ</a></div>
+<div class="nav-link"><a href="#">Contact Support</a></div>
+                <div class="notice">If buttons do not respond, refresh the page.</div>
+                <div class="notice">Export creates a PNG of the current flag.</div>
+            </td>
+        </tr>
+        <tr>
+            <td id="footer" colspan="3">
+                <hr class="rule" />
+                <div class="footer-links">
+                    <a href="#">Main Agency</a> | <a href="#">Gov Portal</a> | <a href="#">Site Map</a> | <a href="#">Legacy Pages</a>
+                </div>
+                <div class="smallprint">© 2025 National Agency of Vexillology. All unauthorized access will be prosecuted.</div>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Error modal (early-2000s government style) -->
+    <div id="error-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="error-title">
+        <div class="modal-window">
+            <div class="modal-header">
+                <span id="error-title">Export Error</span>
+                <button id="modal-close" class="modal-close" title="Close">X</button>
+            </div>
+            <div class="modal-body">
+                <div class="gov-error-box">Export service is temporarily unavailable. Please try again later.</div>
+            </div>
+            <div class="modal-actions">
+                <button id="modal-ok">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
