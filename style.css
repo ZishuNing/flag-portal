@@ -123,9 +123,9 @@ h1 {
 .flag-thumbnail {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
+    justify-content: center; 
     align-items: center;
-    gap: 4px;
+    gap: 16px;
     padding: 6px;
     border: 1px solid #666;
     background: #f5f5f5;
@@ -150,7 +150,6 @@ h1 {
 .flag-name {
     font-size: 11px;
     color: #333;
-    margin-top: auto;
     word-break: break-word;
 }
 .flag-thumbnail:hover .flag-name {
