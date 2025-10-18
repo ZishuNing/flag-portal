@@ -1,18 +1,15 @@
-/* Early-2000s government website aesthetic */
-
 body {
     font-family: "Times New Roman", Arial, serif;
     font-size: 13px;
     color: #000;
     background: #e9edf3;
     margin: 0;
-    padding: 0 32px; /* increase left/right margins */
+    padding: 0 32px; 
 }
 
-/* Overall table layout */
 #layout {
     width: 100%;
-    max-width: 1400px; /* expand display area */
+    max-width: 1400px; 
     margin: 0 auto;
     border-collapse: collapse;
     background: #ffffff;
@@ -115,7 +112,6 @@ h1 {
     line-height: 1.2;
 }
 
-/* Flag selection: grid of 5 per row, consistent spacing */
 #flag-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -127,33 +123,34 @@ h1 {
 .flag-thumbnail {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribute space between image and name */
+    justify-content: flex-start; 
     align-items: center;
+    gap: 4px;
     padding: 6px;
     border: 1px solid #666;
     background: #f5f5f5;
     text-align: center;
     box-sizing: border-box;
     cursor: pointer;
-    height: 120px; /* Fixed height for consistent alignment */
+    height: 120px; 
 }
 .flag-thumbnail.selected .flag-name {
-    color: #663399; /* Retro purple */
+    color: #663399;
 }
 .flag-thumbnail img {
-    width: 100px; /* reduced icon size */
-    height: 60px; /* Fixed height for image to ensure consistent aspect ratio */
-    object-fit: contain; /* Ensure image fits without distortion */
+    width: 100px; 
+    height: 60px; 
+    object-fit: contain;
     image-rendering: pixelated;
     filter: contrast(80%) saturate(80%) blur(0.3px);
-    border: none; /* Removed thin black border */
+    border: none; 
     display: block;
-    margin: 0 auto; /* Center image horizontally */
+    margin: 0 auto;
 }
 .flag-name {
     font-size: 11px;
     color: #333;
-    margin-top: auto; /* Push name to the bottom */
+    margin-top: auto;
     word-break: break-word;
 }
 .flag-thumbnail:hover .flag-name {
@@ -161,7 +158,6 @@ h1 {
     text-decoration: underline;
 }
 
-/* Coloring area */
 #coloring-screen { padding: 2px; }
 #flag-container {
     margin: 2px 0;
@@ -201,14 +197,11 @@ button { cursor: pointer; }
 }
 .footer-links a { color: #003399; text-decoration: underline; }
 
-/* Utility */
 .hidden { display: none !important; }
 
-/* Links */
 a { color: #003399; text-decoration: underline; }
 a:visited { color: #663399; }
 
-/* Modal (early-2000s government style) */
 .modal-overlay {
     position: fixed;
     left: 0; top: 0; right: 0; bottom: 0;
@@ -222,7 +215,7 @@ a:visited { color: #663399; }
     width: 420px;
     background: #fff;
     border: 3px solid #003366;
-    box-shadow: 4px 4px 0 #99a; /* chunky drop shadow */
+    box-shadow: 4px 4px 0 #99a; 
     font-family: \"Times New Roman\", Arial, serif;
 }
 .modal-header {
@@ -247,7 +240,7 @@ a:visited { color: #663399; }
 }
 .modal-body { padding: 8px; font-size: 12px; color: #333; }
 .gov-error-box {
-    background: #fffbe6; /* pale yellow info box */
+    background: #fffbe6;
     border: 2px solid #cc9933;
     padding: 6px;
     color: #333;
@@ -258,7 +251,6 @@ a:visited { color: #663399; }
     border-top: 2px solid #99a;
 }
 
-/* Responsive grid columns */
 @media (max-width: 1200px) {
   #flag-grid { grid-template-columns: repeat(4, 1fr); }
 }
